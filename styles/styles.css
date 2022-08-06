@@ -312,8 +312,21 @@ main p {
   flex-direction: column;
   align-items: center;
 
-
 }
+
+input[type=text], select {
+  width: 55%;
+  padding: 1rem;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgba(79, 78, 89, 1);
+  border-radius: 8px;
+  box-sizing: border-box;
+  background: rgba(79, 78, 89, 0.5);
+  color:#CDCDCD;
+  font-size: 1rem;
+}
+
 .showcase h1 {
   color: #CDCDCD;
   font-size: 1.5rem;
@@ -329,12 +342,12 @@ main p {
 
 .container {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit,minmax(18rem,1fr));
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill,minmax(20rem,1fr));
   background: none;
   border-radius: 1.5rem;
   justify-content: space-around;
-  width: 90%;
+  width: 85%;
   margin: auto;
   padding: 1.5rem 0rem;
 }
@@ -384,6 +397,19 @@ main p {
   justify-content: center;
   fill: #838691;
 }
+
+.overview .categories {
+    display: flex;
+    gap: 0.5rem;
+
+}
+.overview .categories .tag {
+    background: #838691;
+    gap: 0.5rem;
+    padding: 0.4rem;
+    color: rgb(177, 177, 177)
+
+}
 .overview .image {
   height: 10rem;
   width: 100%;
@@ -405,7 +431,7 @@ main p {
   color: #313138;
   padding: 0.5rem 0.8rem;
   align-self: flex-end;
-  margin-right: 10%;
+  margin-right: 7.4%;
   font-weight: 600;
   border-radius: 10px;
 }

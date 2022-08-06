@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hey there I'm Waishnav</title>
-    <script src="main.js"></script>
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
 </head>
@@ -89,75 +88,11 @@
     </section>
     <section class="showcase">
         <h1>Latest Posts<div class="underline"></div></h1>
-        <div class="container">
-            <a  href="" class="overview">
-                <div class="title">What I learned about life through chess??</div>
-                <div class="date" ><span><svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 24 24" width="16px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg></span>
-                    24 May 2022</div>
-          <p class="description">
-            Ever since I started playing chess, I was always getting some pattern which can relate with our life
-            situations. So here is the full explained blog around it...
-          </p>
-          <div class="category">
-          </div>
-
-        </a>
-        <a href="" class="overview">
-          <div class="title">
-            How Capitalism is +ve Sum Game over Zero Sum game ?
-          </div>
-          <div class="date"><span><svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 24 24" width="16px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg></span>
-            24 May 2022
-          </div>
-          <p class="description">Ever since I started playing chess, I was always getting some pattern which can relate with out life
-            situations. So here is the full explained blog around it...
-          </p>
-          <div class="category">
-          </div>
-        </a>
-        <a href="" class="overview" >
-          <div class="title">
-            Kunal Shah's Delta 4 theory Explained?
-          </div>
-          <div class="date"><span><svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 0 24 24" width="16px" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg></span>
-            24 May 2022
-          </div>
-          <p class="description">Ever since I started playing chess, I was always getting some pattern which can relate with out life
-            situations. So here is the full explained blog around it...
-          </p>
-          <div class="category">
-          </div>
-        </a>
-      </div>
+        <div class="container" id="postsContainer"></div>
       <a class="more-button" href="./posts.html">See More</a>
       <h1>Recent Projects
         <div class="underline"></div></h1>
-      <div class="container">
-        <a href="" class="overview">
-          <div class="image">
-            <!-- <img src="" alt=""> -->
-          </div>
-          <div class="title">Auto-Color</div>
-          <p class="description">
-              Get color pallet from Image
-          </p>
-        </a>
-        <a href="" class="overview">
-          <div class="image">
-            <img src="./assets/watcher.png" alt="">
-          </div>
-          <div class="title">Watcher</div>
-          <p class="description">
-              The App that allows you to get your Screen-Time
-          </p>
-        </a>
-        <a href="" class="overview">
-          <div class="image"></div>
-          <div class="title">Blogging Experiment</div>
-          <p class="description">
-              Recently I just started out documenting my thoughts and ideas, So stated with blogging
-          </p>
-        </a>
+      <div class="container" id="projectsContainer">
       </div>
       <a class="more-button" href="./projects.html">See More</a>
     </section>
@@ -201,4 +136,6 @@
       <span>Copyright © 2022 Waishnav</span>
     </footer>
 </body>
+<script type="text/json" src="data.json"></script>
+<script type="text/javascript" src="main.js"></script>
 </html>
