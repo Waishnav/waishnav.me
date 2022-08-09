@@ -150,6 +150,9 @@ main p {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
+  #ProfileIntro {
+    padding-top: 0.3rem;
+  }
   article {
       margin: 5rem 10rem;
   }
@@ -315,7 +318,7 @@ main p {
 }
 
 input[type=text], select {
-  width: 55%;
+  width: 75%;
   padding: 1rem;
   margin: 8px 0;
   display: inline-block;
@@ -401,13 +404,16 @@ input[type=text], select {
 .overview .categories {
     display: flex;
     gap: 0.5rem;
+    flex-wrap: wrap;
 
 }
 .overview .categories .tag {
-    background: #838691;
+    background: rgba(177,177,177,0.2);
     gap: 0.5rem;
-    padding: 0.4rem;
-    color: rgb(177, 177, 177)
+    padding: 0.1rem 0.5rem;
+    color: rgb(177, 177, 177);
+    border-radius: 5px;
+    font-size: 0.9rem;
 
 }
 .overview .image {

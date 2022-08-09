@@ -1,73 +1,9 @@
-
-//window.location.href
-/*
-let postList = JSON.parse(list.posts);
-let projectList = JSON.parse(list.projects);
-*/
-
-// syntax of fetch
-/*
-response => response.json()
-same as
-function (response) {
-    return response.json()
-}
- */
-
-/*
-const posts = [
-    {
-        "date" : "24 May 2022",
-        "title": "Kunal Shah's Delta 4 theory Explained.",
-        "link": "./posts/delta4-throry.html",
-        "categories": ["Buissness", "Philosophy", "Idea-Analysis"],
-        "description": "This is just example0 description",
-    },
-    {
-        "date" : "20 August 2022",
-        "title": "Dall E-2 explained | and quest to define creativity",
-        "link": "./posts/dallE2-creativity.html",
-        "categories": ["AI", "Philosophy", "Idea-Analysis"],
-        "description": "This is just example1 description",
-    },
-    {
-        "date" : "24 August 2022",
-        "title": "How capitalism is +ve Sum Game and not Zero-Sum game?",
-        "link": "./posts/example.html",
-        "categories": ["Idea-Analysis", "Philosophy"],
-        "description": "This is just example2 description",
-    },
-]
-
-const projects = [
-    {
-        "link" : "https://github.com/Waishnav/Watcher",
-        "title": "Watcher-Screen time tracker",
-        "description": "App that allows you to get your screen-time",
-        "imgLink": "./assets/watcher.png",
-    },
-
-    {
-        "link" : "https://github.com/Waishnav/Color-wizard",
-        "title": "Color-wizard",
-        "description": "Get color pallet from image which is compatible for both light and dark theme",
-        "imgLink": "./assets/color_wizard.png",
-    },
-
-    {
-        "link" : "https://github.com/Waishnav/Watcher",
-        "title": "Watcher-Screen time tracker",
-        "description": "App that allows you to get your screen-time",
-        "imgLink": "./assets/watcher.png",
-    }
-];
-*/
 function addPost(example) {
     let anchor = document.createElement('a')
     // a.setAttribute(href, example.link);
     anchor.href = example.link;
     anchor.className = "overview";
-    let title, date, description
+    let title, date, description, categories, tag, t
     title = document.createElement('div');
     title.innerHTML = example.title;
     title.className = "title";
@@ -83,9 +19,20 @@ function addPost(example) {
     description.className = "description";
     // console.log(description.innerHTML)
 
+    categories = document.createElement('div');
+    categories.className = "categories";
+    for (i = 0; i < example.categories.length; i++) {
+        t = example.categories[i];
+        tag = document.createElement('div');
+        tag.innerText = t;
+        tag.className = "tag";
+        categories.appendChild(tag);
+    }
+
     anchor.append(title);
     anchor.append(date);
     anchor.append(description);
+    anchor.append(categories);
     document.getElementById('postsContainer').appendChild(anchor)
 
 }
@@ -121,26 +68,52 @@ function addProject(example) {
 
 function searchFunction(post = true) {
     // Declare variables
-    
-    let input, filter, a, i, txtValue;
+
+    let input, filter, a, i, txtValue, tag;
     input = document.getElementById('user_input');
     filter = input.value.toUpperCase();
     all_links = document.getElementsByClassName('overview');
-  
+
     // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < all_links.length; i++) {
-      a = all_links[i];
-      if (post == true) {
-        title = a.childNodes[0];
+      if (filter[0] == "#") {
+          let search_tag = filter.slice(1).toUpperCase()
+          let a = all_links[i]
+          let tags = a.childNodes[3].innerText.split("\n")
+          /*
+          input.addEventListener("keypress", function(event)) {
+              if ((event.key) === "Enter") {
+                  +
+              }
+          }
+          */
+          for (let i = 0; i < tags.length; i++) {
+              let tag = tags[i];
+              for (let j = 0; j < tag.length; j++) {
+                if (tag[j].indexOf(search_tag) > -1) {
+                    a.style.display = "";
+                } else {
+                    a.style.display = "none";
+                    }
+                }
+          }
+
+
       } else {
-        title = a.childNodes[1]
-      }
-      
-      txtValue = title.textContent || title.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        a.style.display = "";
+          a = all_links[i];
+          if (post == true) {
+            title = a.childNodes[0];
+        } else {
+            title = a.childNodes[1]
+            }
+
+        txtValue = title.textContent || title.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            a.style.display = "";
       } else {
-        a.style.display = "none";
+            a.style.display = "none";
+        }
+
       }
     }
 }
@@ -148,7 +121,7 @@ function searchFunction(post = true) {
 
 window.addEventListener("DOMContentLoaded", () => {
     //if (document.readyState === "complete") {
-        
+
 
         //console.log("yes")
 fetch("data.json")

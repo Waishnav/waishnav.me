@@ -9,7 +9,7 @@
 
     {
         "date" : "20 August 2022",
-        "title": "Dall E-2 explained | and quest to define creativity",
+        "title": "Dall-E-2 explained and redefining creativity",
         "link": "./dallE2-creativity.html",
         "categories": ["AI", "Philosophy", "Idea-Analysis"],
         "description": "Framework of creativity explained which is implemented by OpenAI's tool Dall-E"
@@ -36,12 +36,6 @@
         "title": "Color-Wizard",
         "description": "App which gaves color pallet according to Dark and Light theme",
         "imgLink": "./assets/Color-wizard.png"
-    },
-    {
-        "link" : "https://github.com/Waishnav/chrome-extension",
-        "title": "______",
-        "description": "App which gaves color pallet according to Dark and Light theme",
-        "imgLink": "./assets/chrome-extension.png"
     }
 ]
 }
