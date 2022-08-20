@@ -31,7 +31,7 @@
         "visit" : "none",
         "title": "Watcher",
         "description": "Minimal screen time tracker for linux",
-        "imgLink": "./assets/watcher.png"
+        "imgLink": "/assets/watcher.png"
     }
 ]
 }
