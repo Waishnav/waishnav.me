@@ -2,7 +2,7 @@
     {
         "date" : "24 May 2022",
         "title": "Kunal Shah's Delta 4 theory Explained.",
-        "link": "./posts/delta4-throry.html",
+        "link": "/posts/delta-4-theory-explained.html",
         "categories": ["Buissness", "Philosophy", "Idea-Analysis"],
         "description": "Almost a year ago I come across this theory by Kunal, and it helps me evaluate ideas"
     },
@@ -10,7 +10,7 @@
     {
         "date" : "20 August 2022",
         "title": "Dall-E-2 explained and redefining creativity",
-        "link": "./dallE2-creativity.html",
+        "link": "/posts/dall-E-2-and-creativity.html",
         "categories": ["AI", "Philosophy", "Idea-Analysis"],
         "description": "Framework of creativity explained which is implemented by OpenAI's tool Dall-E"
     },
@@ -18,7 +18,7 @@
     {
         "date" : "24 August 2022",
         "title": "How capitalism is +ve Sum Game and not Zero-Sum game?",
-        "link": "./posts/example.html",
+        "link": "/posts/capitalism-a-positive-sum-game.html",
         "categories": ["Idea-Analysis", "Philosophy"],
         "description": "Through this posts, I learned about +ve sum and Zero-Sum games"
     }
@@ -26,16 +26,12 @@
 
   "projects": [
     {
-        "link" : "https://github.com/Waishnav/Watcher",
+        "link" : "/projects/Watcher.html",
+        "github" : "https://github.com/Waishnav/Watcher",
+        "visit" : "none",
         "title": "Watcher",
         "description": "Minimal screen time tracker for linux",
         "imgLink": "./assets/watcher.png"
-    },
-    {
-        "link" : "https://github.com/Waishnav/Color-wizard",
-        "title": "Color-Wizard",
-        "description": "App which gaves color pallet according to Dark and Light theme",
-        "imgLink": "./assets/Color-wizard.png"
     }
 ]
 }
