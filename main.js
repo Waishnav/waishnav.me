@@ -24,7 +24,7 @@ function addPost(example) {
     for (i = 0; i < example.categories.length; i++) {
         t = example.categories[i];
         tag = document.createElement('div');
-        tag.innerText = t;
+        tag.innerText = "#"+t;
         tag.className = "tag";
         categories.appendChild(tag);
     }
@@ -42,7 +42,7 @@ function addProject(example) {
     // a.setAttribute(href, example.link);
     anchor.href = example.link;
     anchor.className = "overview";
-    let title, imgDiv, img, description;
+    let title, imgDiv, img, description, links;
     title = document.createElement('div');
     title.innerHTML = example.title;
     title.className = "title";
@@ -57,11 +57,30 @@ function addProject(example) {
     description = document.createElement('p');
     description.innerHTML = example.description;
     description.className = "description";
-    // console.log(description.innerHTML)
+
+    links = document.createElement('div');
+    links.className = "links";
+
+    if (example.visit != "none") {
+        const visitlink = document.createElement('a');
+        const visitSvg = '';
+        visitlink.innerHTML = visitSvg;
+        visitlink.href = example.visit;
+        links.append(visitlink)
+    }
+    if (example.github != "none") {
+        const github = document.createElement('a');
+        const githubSvg = '<svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" width="1.2em" height="1.2em"><path fill="currentColor" fill-rule="evenodd" d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476c0-.237-.013-1.024-.013-1.862c-2.512.463-3.162-.612-3.362-1.175c-.113-.288-.6-1.175-1.025-1.413c-.35-.187-.85-.65-.013-.662c.788-.013 1.35.725 1.538 1.025c.9 1.512 2.338 1.087 2.912.825c.088-.65.35-1.087.638-1.337c-2.225-.25-4.55-1.113-4.55-4.938c0-1.088.387-1.987 1.025-2.688c-.1-.25-.45-1.275.1-2.65c0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337c1.912-1.3 2.75-1.024 2.75-1.024c.55 1.375.2 2.4.1 2.65c.637.7 1.025 1.587 1.025 2.687c0 3.838-2.337 4.688-4.562 4.938c.362.312.675.912.675 1.85c0 1.337-.013 2.412-.013 2.75c0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10Z"></path></svg>' + 'Source';
+        github.innerHTML = githubSvg;
+        github.href = example.github;
+        links.append(github)
+    }
+
 
     anchor.append(imgDiv);
     anchor.append(title);
     anchor.append(description);
+    anchor.append(links);
     document.getElementById('projectsContainer').appendChild(anchor)
 
 }
@@ -80,24 +99,13 @@ function searchFunction(post = true) {
           let search_tag = filter.slice(1).toUpperCase()
           let a = all_links[i]
           let tags = a.childNodes[3].innerText.split("\n")
-          /*
-          input.addEventListener("keypress", function(event)) {
-              if ((event.key) === "Enter") {
-                  +
-              }
+          for ( let j = 0; j < tags.length; j++) {
+            if (tags[j].toUpperCase().indexOf(search_tag) > -1) {
+                a.style.display = "";
+            } else {
+                a.style.display = "none";
+            }
           }
-          */
-          for (let i = 0; i < tags.length; i++) {
-              let tag = tags[i];
-              for (let j = 0; j < tag.length; j++) {
-                if (tag[j].indexOf(search_tag) > -1) {
-                    a.style.display = "";
-                } else {
-                    a.style.display = "none";
-                    }
-                }
-          }
-
 
       } else {
           a = all_links[i];
@@ -122,9 +130,7 @@ function searchFunction(post = true) {
 window.addEventListener("DOMContentLoaded", () => {
     //if (document.readyState === "complete") {
 
-
-        //console.log("yes")
-fetch("data.json")
+fetch(window.location.protocol + "//" + window.location.host + "/data.json")
     .then(response => response.json())
     .then(data => {
         let projectList = data.projects;
@@ -132,7 +138,7 @@ fetch("data.json")
         //console.log(postList)
         let hostname = window.location.host;
         let url = window.location.href;
-        if (url == "http://" + hostname + "/index.html" || url == "http://" + hostname + "/") {
+        if (url.includes("/index.html") || url == window.location.protocol + "//"+ hostname + "/" ){
             for (let i = 0; i < Math.min(3, postList.length); i++) {
                 addPost(postList[i]);
             } ;
@@ -140,13 +146,13 @@ fetch("data.json")
                 addProject(projectList[i]);
             } ;
         }
-        else if ( url.includes("/posts.html") ) {
+        else if ( url.includes("/posts") ) {
             for (let i = 0; i < postList.length; i++) {
                 addPost(postList[i]);
             } ;
 
         }
-        if ( url.includes("/projects.html") ) {
+        if ( url.includes("/projects") ) {
             for (let i = 0; i < projectList.length; i++) {
                 addProject(projectList[i]);
             } ;
