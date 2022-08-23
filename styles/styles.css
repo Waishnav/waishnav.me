@@ -3,7 +3,7 @@
 
 :root {
   font-size: 16px;
-  font-family: 'Poppins';
+/*  font-family: 'Poppins'; */
   --text-primary: #d1d1d1;
   --text-secondary: #b6b6b6;
   --fg-primary: #8C86D5;
@@ -107,7 +107,7 @@ main p {
     bottom: 0;
     width: 100vw;
     height: 5rem;
-    border-top: #4F4E59 solid 2px;
+    border-top: var(--bg-secondary) solid 2px;
     padding-top: 0.5rem;
   }
   .nav-links svg {
@@ -151,7 +151,7 @@ main p {
     top: 0;
     width: 5rem;
     height: 100vh;
-    border-right: #4F4E59 solid 2px;
+    border-right: var(--bg-secondary) solid 2px;
   }
   .navbar .navbox {
     flex-direction: column;
@@ -160,6 +160,7 @@ main p {
     gap: 2.2rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    max-width: 1220px;
   }
   #ProfileIntro {
     padding-top: 0.3rem;
@@ -237,9 +238,9 @@ main p {
   display: flex;
   justify-content: center;
   z-index: 0;
-  background-color: #4F4E59;
   height: 2.9rem;
   width: 2.9rem;
+  border: 2px solid var(--bg-secondary);
   border-radius: 10px;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 9px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 9px 0 rgba(0, 0, 0, 0.19);
@@ -338,6 +339,7 @@ input[type=text], select {
   width: 85%;
   margin: auto;
   padding: 1.5rem 0rem;
+  max-width: 1220px;
 }
 
 .overview {

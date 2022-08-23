@@ -61,6 +61,7 @@ function addProject(example) {
     links = document.createElement('div');
     links.className = "links";
 
+    /*
     if (example.visit != "none") {
         const visitlink = document.createElement('a');
         const visitSvg = '';
@@ -75,6 +76,7 @@ function addProject(example) {
         github.href = example.github;
         links.append(github)
     }
+    */
 
 
     anchor.append(imgDiv);
