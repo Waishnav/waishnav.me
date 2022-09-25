@@ -5,12 +5,11 @@
 window.addEventListener("DOMContentLoaded", () => {
     //if (document.readyState === "complete") {
 
-    fetch(window.location.protocol + "//" + window.location.host + "/data.json")
+    fetch("/data.json")
         .then(response => response.json())
         .then(data => {
             var projectList = data.projects;
             var postList = data.posts;
-        })
         //console.log(postList)
         let hostname = window.location.host;
         let url = window.location.href;
@@ -37,5 +36,6 @@ window.addEventListener("DOMContentLoaded", () => {
             } ;
     }
 
+  })
 });
 

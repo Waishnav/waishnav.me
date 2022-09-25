@@ -26,7 +26,7 @@
 
   "projects": [
     {
-        "link" : "/projects/Watcher.html",
+        "link" : "/projects/watcher-screen-time-tracker.html",
         "github" : "https://github.com/Waishnav/Watcher",
         "visit" : "none",
         "title": "Watcher",
