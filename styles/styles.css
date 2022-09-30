@@ -6,11 +6,27 @@
 /*  font-family: 'Poppins'; */
   --text-primary: #d1d1d1;
   --text-secondary: #b6b6b6;
+  --imp-text: #CDCDCD;
   --fg-primary: #8C86D5;
   --fg-secondary: #EB6D6D;
   --bg-primary: #313138;
   --bg-secondary: rgba(79, 78, 89, 0.5);
   --transition-speed: 300ms;
+  --tag-bg: rgba(177,177,177,0.2);
+
+}
+
+.light-theme {
+  --text-primary: #313138;
+  --text-secondary: #585858;
+  --imp-text: #383838;
+  --fg-primary: #8379f4;
+  --fg-secondary: #EB6D6D;
+  --bg-primary: rgb(237, 237, 237);
+  --bg-secondary: rgba(255, 255, 255, 1);
+  --transition-speed: 300ms;
+  --tag-bg: rgba(177,177,177,0.4);
+
 }
 
 html {

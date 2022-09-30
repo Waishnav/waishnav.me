@@ -37,7 +37,7 @@
 }
 
 .greeting-1,.greeting-3, .greeting-4 {
-  color: #CDCDCD
+  color: var(--imp-text)
 }
 .greeting-2 {
   color: var(--fg-primary);

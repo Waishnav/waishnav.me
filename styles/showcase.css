@@ -13,13 +13,14 @@ input[type=text], select {
   border: 1px solid rgba(79, 78, 89, 1);
   border-radius: 8px;
   box-sizing: border-box;
-  background: rgba(79, 78, 89, 0.5);
-  color:#CDCDCD;
+  background: var(--bg-secondary);
+  color: var(--imp-text);
   font-size: 1rem;
+  outline: none;
 }
 
 .showcase h1 {
-  color: #CDCDCD;
+  color: var(--imp-text);
   font-size: 1.5rem;
 
 }
@@ -45,7 +46,7 @@ input[type=text], select {
 }
 
 .overview {
-  background: rgba(79, 78, 89, 0.5);
+  background: var(--bg-secondary);
   padding: 1.5rem;
   /*
   width: 15rem;
@@ -55,10 +56,21 @@ input[type=text], select {
   border-radius: 15px;
   transition: transform .2s;
 }
+
+.overview {
+  text-decoration: none;
+  color: inherit;
+}
 .overview:active {
+  text-decoration: none;
+  color: inherit;
+}
+.overview:active {
+  text-decoration: none;
   color: inherit;
 }
 .overview:hover {
+  text-decoration: none;
   transform: translateY(-0.35em);
 }
 
@@ -69,7 +81,7 @@ input[type=text], select {
 }
 
 .overview .description {
-  color: rgb(177, 177, 177)
+  color: var(--text-secondary)
 }
 
 .overview .date {
@@ -100,10 +112,9 @@ input[type=text], select {
 
 }
 .tag {
-    background: rgba(177,177,177,0.2);
-    gap: 0.5rem;
+    background: var(--tag-bg);
     padding: 0.1rem 0.5rem;
-    color: rgb(177, 177, 177);
+    color: var(--text-secondary);
     border-radius: 5px;
     font-size: 0.9rem;
 }
