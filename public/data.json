@@ -1,0 +1,54 @@
+{
+  "posts": [
+    {
+      "date": "24 May 2022",
+      "title": "Kunal Shah's Delta 4 theory Explained.",
+      "link": "/posts/delta-4-theory-explained",
+      "categories": [
+        "Buissness",
+        "Philosophy",
+        "Idea-Analysis"
+      ],
+      "description": "Almost a year ago I come across this theory by Kunal, and it helps me evaluate ideas on the basis of virablity"
+    },
+    {
+      "date": "20 August 2022",
+      "title": "Dall-E-2 explained and redefining creativity",
+      "link": "/posts/dall-E-2-and-creativity",
+      "categories": [
+        "AI",
+        "Philosophy",
+        "Idea-Analysis"
+      ],
+      "description": "Framework of creativity explained which is implemented by OpenAI's tool Dall-E"
+    },
+    {
+      "date": "24 August 2022",
+      "title": "How capitalism is +ve Sum Game and not Zero-Sum game?",
+      "link": "/posts/capitalism-a-positive-sum-game",
+      "categories": [
+        "Idea-Analysis",
+        "Philosophy"
+      ],
+      "description": "Through this posts, I learned about +ve sum and Zero-Sum games"
+    }
+  ],
+  "projects": [
+    {
+      "link": "/projects/Watcher-screen-time-tracker",
+      "github": "https://github.com/Waishnav/Watcher",
+      "visit": "none",
+      "title": "Watcher",
+      "description": "Minimal screen time tracker for linux",
+      "imgLink": "/assets/watcher.png"
+    },
+    {
+      "link": "/projects/Colory-thing",
+      "github": "https://github.com/Waishnav/Colory-thing",
+      "visit": "none",
+      "title": "Colory Thing",
+      "description": "Get different styles of color pallet using image",
+      "imgLink": "/assets/watcher.png"
+    }
+  ]
+}
